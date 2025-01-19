@@ -1,0 +1,124 @@
+/* 全局樣式 */
+body {
+  background-color: #B22222;
+  color: #FFFFFF;
+  font-family: 'Kaiti SC', 'PingFang SC', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* 標題區樣式 */
+header h1 {
+  font-family: 'Kaiti SC', serif;
+  font-size: 20vw;
+  margin: 0;
+}
+
+header h2 {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+header p {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 2.5vw;
+  margin: 5px 0;
+}
+
+/* 生成區域樣式 */
+.generator {
+  margin: 40px 0;
+}
+
+#generateBtn {
+  background-color: #FFD700;
+  color: #B22222;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 2vw;
+  font-family: 'PingFang SC', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#generateBtn:hover {
+  background: linear-gradient(to bottom, #FFA500, #FFD700);
+}
+
+#generateBtn:active {
+  transform: scale(0.95);
+}
+
+.result-box {
+  background-color: rgba(255, 250, 205, 0.8);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-content {
+  font-family: 'PingFang SC', sans-serif;
+  font-size: 2vw;
+  color: #B22222;
+  text-align: center;
+  word-wrap: break-word;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 底部提示樣式 */
+footer p {
+  font-family: 'Kaiti SC', serif;
+  font-size: 1.5vw;
+  margin: 20px 0;
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.show-content {
+  animation: fadeIn 0.3s forwards;
+}
+
+.copy-success {
+  position: absolute;
+  top: -30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #B22222;
+  font-size: 1.2vw;
+  animation: fadeOut 0.5s ease 1s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
